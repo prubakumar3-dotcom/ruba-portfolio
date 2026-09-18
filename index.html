@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ruba Kumar | 3D Creative Web & AI Developer</title>
+  
+  <!-- SEO & Social Meta Tags -->
+  <meta name="description" content="Portfolio of Ruba Kumar — Creative Web & AI Developer from SNS College, Tamil Nadu. Specializing in Python, Machine Learning, and modern full-stack web applications.">
+  <meta name="author" content="Ruba Kumar">
+  <meta name="keywords" content="Ruba Kumar, Web Developer, AI Developer, 3D Portfolio, Machine Learning, Full-Stack Developer, SNS College">
+  <meta property="og:title" content="Ruba Kumar | 3D Creative Web & AI Developer">
+  <meta property="og:description" content="Futuristic, award-winning developer portfolio. Explore modern web applications, AI models, and real-world engineering.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts: Outfit & Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Ambient 3D Lighting & Burnt-Orange Glow Architecture -->
+  <div class="ambient-bg">
+    <div class="ambient-orb-1"></div>
+    <div class="ambient-orb-2"></div>
+  </div>
+  <canvas id="bg-canvas"></canvas>
+  <div class="ambient-grid"></div>
+
+  <!-- =========================================================================
+       1. NAVIGATION: Pill-Shaped Glass Bar
+       ========================================================================= -->
+  <header class="site-header" id="site-header">
+    <div class="container">
+      <nav class="nav-bar" aria-label="Main Navigation">
+        <!-- Small Logo Top-Left -->
+        <a href="#home" class="brand" aria-label="Ruba Kumar Home">
+          <div class="brand-monogram">RK</div>
+          <div class="brand-text">
+            <span class="brand-name">Ruba Kumar</span>
+            <span class="brand-role">Web & AI Developer</span>
+          </div>
+        </a>
+
+        <!-- Center Pill-Shaped Navigation: Home, Skills, Experience, Contact -->
+        <ul class="nav-links">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+
+        <!-- Right Action: Download Resume Button -->
+        <div class="nav-actions">
+          <a href="#contact" class="btn-resume" id="btn-download-resume" title="Download Resume / CV">
+            <span>Download Resume</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+          </a>
+          <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer" id="mobile-drawer">
+    <ul class="mobile-drawer-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+
+  <main>
+    <!-- =======================================================================
+         2. 3D HERO SECTION (With Large 3D Developer Character in Orange Jacket)
+         ======================================================================= -->
+    <section class="hero-section" id="home">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <!-- Left Column: Headline, Description & CTAs -->
+          <div class="hero-content">
+            <div class="hero-badge">
+              <span class="radar-pulse"></span>
+              <span>HELLO, I'M RUBA KUMAR — CREATIVE DEVELOPER</span>
+            </div>
+
+            <!-- Large Headline -->
+            <h1 class="hero-headline">
+              Creative<br>
+              <span class="gradient-orange">Web Developer</span><br>
+              & AI Explorer.
+            </h1>
+
+            <!-- Short Professional Description -->
+            <p class="hero-subtitle">
+              College student at SNS College turning complex ideas into seamless digital experiences. Specializing in Python, Machine Learning algorithms, and high-performance full-stack web applications.
+            </p>
+
+            <div class="hero-meta-pill">
+              <span>📍 Tamil Nadu, India</span>
+              <span>•</span>
+              <span>🎓 SNS College</span>
+              <span>•</span>
+              <span style="color: var(--accent-orange-bright);">● Available for Projects</span>
+            </div>
+
+            <!-- Bright Orange "Hire Me" CTA + Secondary Circular Contact Button -->
+            <div class="hero-cta-group">
+              <a href="#contact" class="btn-hire-me" id="cta-hire-me">
+                <span>Hire Me</span>
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+
+              <a href="#contact" class="btn-contact-circular" id="cta-contact-circle" title="Get in touch" aria-label="Contact Ruba Kumar">
+                ↗
+              </a>
+            </div>
+
+            <!-- Social Links -->
+            <div class="hero-socials">
+              <a href="https://github.com/prubakumar3-dotcom" target="_blank" rel="noopener noreferrer" class="social-pill" title="GitHub Profile">
+                <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                <span>GitHub</span>
+              </a>
+              <a href="https://linkedin.com/in/rubakumar" target="_blank" rel="noopener noreferrer" class="social-pill" title="LinkedIn Profile">
+                <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                <span>LinkedIn</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column: 3D Developer Character Stage with Orbit Arcs & Floating Badges -->
+          <div class="hero-3d-stage">
+            <!-- Subtle Curved Orbit Lines -->
+            <div class="orbit-arc-1"></div>
+            <div class="orbit-arc-2"></div>
+
+            <!-- Floating 3D Coding & Technology Badges -->
+            <div class="floating-3d-badge f-badge-1">
+              <span style="color: var(--accent-orange-bright);">&lt;/&gt;</span>
+              <span>Python &amp; JavaScript</span>
+            </div>
+
+            <div class="floating-3d-badge f-badge-2">
+              <span style="color: var(--accent-amber);">🧠</span>
+              <span>AI &amp; Scikit-Learn</span>
+            </div>
+
+            <div class="floating-3d-badge f-badge-3">
+              <span style="color: var(--accent-orange-bright);">⚡</span>
+              <span>Flask &amp; REST APIs</span>
+            </div>
+
+            <div class="floating-3d-badge f-badge-4">
+              <span style="color: var(--accent-emerald);">✔</span>
+              <span>99% Code Quality</span>
+            </div>
+
+            <!-- 3D Developer Character Portal Frame -->
+            <div class="character-portal spotlight-card">
+              <img src="assets/images/hero_3d_developer.jpg" alt="3D Cartoon Developer Character in Orange Jacket with Laptop" loading="eager">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         3. SKILLS SECTION (High-End Glassmorphic Interactive Toolkit)
+         ======================================================================= -->
+    <section class="section-padding" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">
+            <span class="dot"></span>
+            <span>Expertise &amp; Capabilities</span>
+          </div>
+          <h2 class="section-title">My Tech Stack &amp; Skills</h2>
+          <p class="section-subtitle">
+            Modern tools, machine learning frameworks, and technologies I actively leverage to engineer scalable digital products.
+          </p>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="filter-tabs">
+          <button class="filter-btn active" data-filter="all">All Technologies (10)</button>
+          <button class="filter-btn" data-filter="ai">AI &amp; Machine Learning</button>
+          <button class="filter-btn" data-filter="backend">Backend &amp; Core</button>
+          <button class="filter-btn" data-filter="frontend">Frontend &amp; Web</button>
+          <button class="filter-btn" data-filter="tools">Workflow &amp; Versioning</button>
+        </div>
+
+        <!-- 3D Glassmorphic Skill Cards Grid -->
+        <div class="tech-grid">
+          
+          <!-- 1. Python -->
+          <div class="tech-card spotlight-card" data-category="backend ai">
+            <div class="tech-card-top">
+              <div class="tech-icon-wrapper">🐍</div>
+              <span class="tech-badge">Core Language</span>
+            </div>
+            <h4>Python</h4>
+            <p>Primary language for algorithmic computing, data modeling, machine learning pipelines, and backend microservices.</p>
+            <div class="tech-tag-row">
+              <span class="tag-pill">Active Building</span>
+            </div>
+          </div>
+
+          <!-- 2. Machine Learning -->
+          <div class="tech-card spotlight-card" data-category="ai">
+            <div class="tech-card-top">
+              <div class="tech-icon-wrapper">🧠</div>
+              <span class="tech-badge">Predictive ML</span>
+            </div>
+            <h4>Machine Learning</h4>
+            <p>Supervised regression, classification modeling, data cleansing, feature correlation, and model evaluation with Scikit-learn.</p>
+            <div class="tech-tag-row">
+              <span class="tag-pill">Exploring Deeply</span>
+            </div>
+          </div>
+
+          <!-- 3. Artificial Intelligence -->
+          <div class="tech-card spotlight-card" data-category="ai">
+            <div class="tech-card-top">
+              <div class="tech-icon-wrapper">✦</div>
+              <span class="tech-badge">Neural Systems</span>
+            </div>
+            <h4>Artificial Intelligence</h4>
+            <p>Investigating neural architectures, conversational assistant patterns, agentic workflows, and LLM API integrations.</p>
+            <div class="tech-tag-row">
+              <span class="tag-pill">Active Exploration</span>
+            </div>
+          </div>
+
+          <!-- 4. HTML -->
+          <div class="tech-card spotlight-card" data-category="frontend">
+            <div class="tech-card-top">
+              <div class="tech-icon-wrapper">📄</div>
+              <span class="tech-badge">Structure</span>
+            </div>
+            <h4>HTML5</h4>
+            <p>Semantic document layout, modern accessibility standards (ARIA), SEO meta structures, and clean landmark hierarchy.</p>
+            <div class="tech-tag-row">
+              <span class="tag-pill">Core Standard</span>
+            </div>
+          </div>
+
+          <!-- 5. CSS -->
+          <div class="tech-card spotlight-card" data-category="frontend">
+            <div class="tech-card-top">
+              <div class="tech-icon-wrapper">🎨</div>
+              <span class="tech-badge">Design &amp; 3D</span>
+            </div>
+            <h4>CSS3 / Modern CSS</h4>
+            <p>Vanilla CSS3, Flexbox, CSS Grid, custom properties, glassmorphism, responsive viewports, and 60fps micro-animations.</p>
+            <div class="tech-tag-row">
+              <span class="tag-pill">Design Craft</span>
+            </div>
+          </div>
+
+          <!-- 6. JavaScript -->
+          <div class="tech-card spotlight-card" data-category="frontend backend">
+            <div class="tech-card-top">
+              <div class="tech-icon-wrapper">⚡</div>
+              <span class="tech-badge">Dynamic Logic</span>
+            </div>
+            <h4>JavaScript</h4>
+            <p>Modern ES6+ syntax, asynchronous fetching, interactive DOM manipulation, canvas rendering, and reactive state management.</p>
+            <div class="tech-tag-row">
+              <span class="tag-pill">Active Building</span>
+            </div>
+          </div>
+
+          <!-- 7. Flask -->
+          <div class="tech-card spotlight-card" data-category="backend">
+            <div class="tech-card-top">
+              <div class="tech-icon-wrapper">🧪</div>
+              <span class="tech-badge">Microframework</span>
+            </div>
+            <h4>Flask</h4>
+            <p>Lightweight Python web framework for architecting REST APIs, routing, and serving ML prediction endpoints.</p>
+            <div class="tech-tag-row">
+              <span class="tag-pill">Active Building</span>
+            </div>
+          </div>
+
+          <!-- 8. SQL -->
+          <div class="tech-card spotlight-card" data-category="backend">
+            <div class="tech-card-top">
+              <div class="tech-icon-wrapper">🗄️</div>
+              <span class="tech-badge">Data Tier</span>
+            </div>
+            <h4>SQL</h4>
+            <p>Relational database querying, schema structuring, data normalization, joins, and persistent state management.</p>
+            <div class="tech-tag-row">
+              <span class="tag-pill">Data Modeling</span>
+            </div>
+          </div>
+
+          <!-- 9. Git -->
+          <div class="tech-card spotlight-card" data-category="tools">
+            <div class="tech-card-top">
+              <div class="tech-icon-wrapper">🌿</div>
+              <span class="tech-badge">VCS</span>
+            </div>
+            <h4>Git</h4>
+            <p>Source code version control, branching strategies, commit cleanliness, conflict resolution, and change tracking.</p>
+            <div class="tech-tag-row">
+              <span class="tag-pill">Daily Workflow</span>
+            </div>
+          </div>
+
+          <!-- 10. GitHub -->
+          <div class="tech-card spotlight-card" data-category="tools">
+            <div class="tech-card-top">
+              <div class="tech-icon-wrapper">🐙</div>
+              <span class="tech-badge">Collaboration</span>
+            </div>
+            <h4>GitHub</h4>
+            <p>Repository hosting, documentation, code review practices, and open-source project management.</p>
+            <div class="tech-tag-row">
+              <span class="tag-pill">Portfolio Hub</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         4. EXPERIENCE & FEATURED PROJECTS SECTION
+         ======================================================================= -->
+    <section class="section-padding" id="experience">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">
+            <span class="dot"></span>
+            <span>Portfolio Highlights</span>
+          </div>
+          <h2 class="section-title">Featured Projects &amp; Work</h2>
+          <p class="section-subtitle">
+            Award-winning concepts built to solve tangible problems, bridging full-stack systems with predictive machine learning.
+          </p>
+        </div>
+
+        <div class="projects-container">
+          
+          <!-- PROJECT 01: Personal AI Life Manager -->
+          <article class="project-card spotlight-card reveal-on-scroll">
+            <div class="project-preview">
+              <span class="project-status-chip">3D AI Dashboard • Live Demo</span>
+              <img src="assets/images/project_ai_3d.jpg" alt="3D Personal AI Life Manager Dashboard UI" loading="lazy">
+            </div>
+
+            <div class="project-info">
+              <div class="project-meta-top">
+                <span class="project-num">PROJECT 01</span>
+                <span class="project-badge-pill">Full-Stack &amp; AI</span>
+              </div>
+              <h3 class="project-title">Personal AI Life Manager</h3>
+              <p class="project-desc">
+                A personal AI assistant designed to help manage notes, tasks and everyday activities through a simple web interface.
+              </p>
+
+              <div class="project-tech-badges">
+                <span class="tech-pill">Python</span>
+                <span class="tech-pill">Flask</span>
+                <span class="tech-pill">JavaScript</span>
+                <span class="tech-pill">Database</span>
+                <span class="tech-pill">AI</span>
+              </div>
+
+              <ul class="project-feature-list">
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>AI assistant interface for smart interaction</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Note management with dynamic search</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Task management &amp; productivity scheduling</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Mobile-friendly responsive UI</span>
+                </li>
+              </ul>
+
+              <div class="project-actions">
+                <button class="btn-project-view" data-project="1">
+                  <span>VIEW PROJECT</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </button>
+                <a href="https://github.com/prubakumar3-dotcom" target="_blank" rel="noopener noreferrer" class="btn-project-gh" title="GitHub Repository">
+                  <span>GITHUB</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 02: Student Performance Prediction -->
+          <article class="project-card spotlight-card reveal-on-scroll">
+            <div class="project-preview">
+              <span class="project-status-chip">3D ML Analytics • Live Predictor</span>
+              <img src="assets/images/project_ml_3d.jpg" alt="3D Student Performance Prediction Analytics UI" loading="lazy">
+            </div>
+
+            <div class="project-info">
+              <div class="project-meta-top">
+                <span class="project-num">PROJECT 02</span>
+                <span class="project-badge-pill">Machine Learning</span>
+              </div>
+              <h3 class="project-title">Student Performance Prediction</h3>
+              <p class="project-desc">
+                A machine learning project that processes student-related data and generates academic performance predictions.
+              </p>
+
+              <div class="project-tech-badges">
+                <span class="tech-pill">Python</span>
+                <span class="tech-pill">Pandas</span>
+                <span class="tech-pill">Scikit-learn</span>
+                <span class="tech-pill">Machine Learning</span>
+              </div>
+
+              <ul class="project-feature-list">
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Data processing &amp; statistical cleansing</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Model training &amp; evaluation (R² = 0.94)</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Real-time score &amp; grade prediction engine</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Web interface with dynamic analytics visualizers</span>
+                </li>
+              </ul>
+
+              <div class="project-actions">
+                <button class="btn-project-view" data-project="2">
+                  <span>VIEW PROJECT</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </button>
+                <a href="https://github.com/prubakumar3-dotcom" target="_blank" rel="noopener noreferrer" class="btn-project-gh" title="GitHub Repository">
+                  <span>GITHUB</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 03: Laundry & Dry Cleaning Management -->
+          <article class="project-card spotlight-card reveal-on-scroll">
+            <div class="project-preview">
+              <span class="project-status-chip">3D Operations • Logistics Hub</span>
+              <img src="assets/images/project_laundry_3d.jpg" alt="3D Laundry and Dry Cleaning Logistics Dashboard" loading="lazy">
+            </div>
+
+            <div class="project-info">
+              <div class="project-meta-top">
+                <span class="project-num">PROJECT 03</span>
+                <span class="project-badge-pill">Enterprise Full-Stack</span>
+              </div>
+              <h3 class="project-title">Laundry &amp; Dry Cleaning Management</h3>
+              <p class="project-desc">
+                A full-stack management concept designed to simplify laundry service requests, pickup, delivery and service management.
+              </p>
+
+              <div class="project-tech-badges">
+                <span class="tech-pill">HTML</span>
+                <span class="tech-pill">CSS</span>
+                <span class="tech-pill">JavaScript</span>
+                <span class="tech-pill">Backend</span>
+                <span class="tech-pill">Database</span>
+                <span class="tech-pill">AI</span>
+              </div>
+
+              <ul class="project-feature-list">
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Service request creation &amp; itemization portal</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Pickup and delivery scheduling timeline</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>End-to-end service status tracking</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Responsive customer &amp; management interface</span>
+                </li>
+              </ul>
+
+              <div class="project-actions">
+                <button class="btn-project-view" data-project="3">
+                  <span>VIEW PROJECT</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </button>
+                <a href="https://github.com/prubakumar3-dotcom" target="_blank" rel="noopener noreferrer" class="btn-project-gh" title="GitHub Repository">
+                  <span>GITHUB</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         5. CONTACT / "HIRE ME" SECTION
+         ======================================================================= -->
+    <section class="section-padding" id="contact">
+      <div class="container">
+        <div class="contact-grid">
+          
+          <!-- Contact Left: Information & Quick Copy Links -->
+          <div class="contact-info reveal-on-scroll">
+            <div class="section-tag">
+              <span class="dot"></span>
+              <span>Let's Connect</span>
+            </div>
+            
+            <h2 class="contact-heading">
+              Have a project in mind?<br>
+              <span class="gradient-orange">Let's build it.</span>
+            </h2>
+
+            <p class="contact-sub">
+              Whether you are looking for an ambitious developer, want to collaborate on AI/ML projects, or discuss software engineering opportunities — I am always ready to build.
+            </p>
+
+            <div class="contact-cards-stack">
+              <!-- Email Card -->
+              <div class="contact-pill-item">
+                <div class="contact-pill-left">
+                  <div class="contact-pill-icon">✉</div>
+                  <div class="contact-pill-text">
+                    <h5>Direct Email</h5>
+                    <p id="display-email">rubakumar.dev@gmail.com</p>
+                  </div>
+                </div>
+                <button class="btn-copy" data-copy="rubakumar.dev@gmail.com" title="Copy Email">
+                  <span>Copy</span>
+                </button>
+              </div>
+
+              <!-- LinkedIn Card -->
+              <div class="contact-pill-item">
+                <div class="contact-pill-left">
+                  <div class="contact-pill-icon">in</div>
+                  <div class="contact-pill-text">
+                    <h5>LinkedIn</h5>
+                    <p>linkedin.com/in/rubakumar</p>
+                  </div>
+                </div>
+                <button class="btn-copy" data-copy="https://linkedin.com/in/rubakumar" title="Copy LinkedIn Link">
+                  <span>Copy</span>
+                </button>
+              </div>
+
+              <!-- GitHub Card -->
+              <div class="contact-pill-item">
+                <div class="contact-pill-left">
+                  <div class="contact-pill-icon">⌥</div>
+                  <div class="contact-pill-text">
+                    <h5>GitHub Profile</h5>
+                    <p>github.com/prubakumar3-dotcom</p>
+                  </div>
+                </div>
+                <button class="btn-copy" data-copy="https://github.com/prubakumar3-dotcom" title="Copy GitHub Link">
+                  <span>Copy</span>
+                </button>
+              </div>
+
+              <!-- College & Location Meta -->
+              <div class="contact-pill-item" style="background: rgba(255, 255, 255, 0.01);">
+                <div class="contact-pill-left">
+                  <div class="contact-pill-icon">📍</div>
+                  <div class="contact-pill-text">
+                    <h5>Location &amp; Education</h5>
+                    <p>Tamil Nadu, India • SNS College</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Right: High-Precision Clean Form -->
+          <div class="contact-form-card spotlight-card reveal-on-scroll">
+            <form id="contact-form" novalidate>
+              <div class="form-group">
+                <label for="contact-name" class="form-label">Your Name</label>
+                <input type="text" id="contact-name" class="form-input" placeholder="e.g. Alex Henderson" required>
+                <div class="form-error" id="name-error">Please enter your name</div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-email" class="form-label">Your Email</label>
+                <input type="email" id="contact-email" class="form-input" placeholder="e.g. alex@company.com" required>
+                <div class="form-error" id="email-error">Please enter a valid email address</div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-subject" class="form-label">Project Type / Inquiry</label>
+                <input type="text" id="contact-subject" class="form-input" placeholder="Full-Stack Web App / AI Collaboration">
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message" class="form-label">Your Message</label>
+                <textarea id="contact-message" class="form-textarea" placeholder="Tell me about your project, idea, or role..." required></textarea>
+                <div class="form-error" id="message-error">Please enter your message (at least 8 characters)</div>
+              </div>
+
+              <button type="submit" class="btn-submit" id="contact-submit-btn">
+                <span>SEND MESSAGE</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       6. MINIMAL PREMIUM FOOTER
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-copy">
+          <strong>Ruba Kumar</strong> © 2026 • Tamil Nadu, India
+        </div>
+        <div class="footer-tagline">
+          Built with curiosity, code &amp; coffee.
+        </div>
+        <div class="footer-links">
+          <a href="https://linkedin.com/in/rubakumar" target="_blank" rel="noopener noreferrer" class="social-pill" style="padding: 6px 14px; font-size: 0.75rem;">
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://github.com/prubakumar3-dotcom" target="_blank" rel="noopener noreferrer" class="social-pill" style="padding: 6px 14px; font-size: 0.75rem;">
+            <span>GitHub</span>
+          </a>
+          <a href="#home" class="back-to-top" id="back-to-top" title="Back to top" aria-label="Back to top">
+            ↑
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       7. INTERACTIVE PROJECT MODAL (With Live Simulators)
+       ========================================================================= -->
+  <div class="modal-backdrop" id="project-modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close project preview">×</button>
+      
+      <div class="modal-banner">
+        <img id="modal-img" src="" alt="Project Visual Preview">
+      </div>
+
+      <div class="modal-body">
+        <h3 class="modal-title" id="modal-title">Project Title</h3>
+        <div class="modal-tech-row" id="modal-tech"></div>
+        <p class="modal-desc" id="modal-desc">Detailed project description goes here.</p>
+
+        <!-- Dynamic Container for Live Project Simulators -->
+        <div id="modal-simulator-container"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Core JavaScript -->
+  <script src="js/app.js"></script>
+</body>
+</html>
